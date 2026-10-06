@@ -1,0 +1,122 @@
+:root {
+    --ink: #202a2d;
+    --muted: #647276;
+    --line: #d9e1df;
+    --paper: #ffffff;
+    --canvas: #edf2f0;
+    --accent: #c94336;
+    --accent-dark: #a83229;
+    --focus: rgba(201, 67, 54, 0.18);
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--canvas);
+    background-image: repeating-linear-gradient(
+        135deg,
+        rgba(32, 42, 45, 0.025) 0,
+        rgba(32, 42, 45, 0.025) 1px,
+        transparent 1px,
+        transparent 12px
+    );
+    color: var(--ink);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    padding-bottom: 48px;
+}
+
+h1 {
+    margin-bottom: 24px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+hr {
+    border-color: #b9c5c1;
+    margin: 22px 0;
+    opacity: 1;
+}
+
+form {
+    position: relative;
+    overflow: hidden;
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-top: 4px solid var(--accent);
+    border-radius: 6px;
+    background: var(--paper);
+    box-shadow: 0 12px 32px rgba(32, 42, 45, 0.08);
+}
+
+.form-label {
+    margin-bottom: 8px;
+    color: var(--ink);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    min-height: 46px;
+    border-color: #cbd5d2;
+    border-radius: 4px;
+    color: var(--ink);
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--focus);
+}
+
+.form-check-input:checked {
+    border-color: var(--accent);
+    background-color: var(--accent);
+}
+
+.form-check-label {
+    color: var(--muted);
+}
+
+.btn-primary {
+    min-height: 46px;
+    padding: 10px 24px;
+    border-color: var(--accent);
+    border-radius: 4px;
+    background-color: var(--accent);
+    font-weight: 600;
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    border-color: var(--accent-dark);
+    background-color: var(--accent-dark);
+}
+
+.alert {
+    border-radius: 4px;
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    form {
+        padding: 20px 16px;
+    }
+
+    form .btn-primary {
+        width: 100%;
+    }
+}
